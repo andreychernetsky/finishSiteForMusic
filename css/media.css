@@ -1,5 +1,12 @@
-@media (max-width: 1156px) {
+@media screen and(min-width: 1200px) {
 
+
+}
+@media screen and(max-width: 1200px) {
+	.Card__wrap {
+		display: flex;
+		flex-flow: row wrap;
+	}
 
 }
 
@@ -10,27 +17,32 @@
 @media (max-width: 900px) {
 	.slider .slick-btn {
 		display: none !important;
+	}
 
 	.services__items {
 		display: flex;
 		flex-direction: column;
 	}
-	.services__item{
+
+	.services__item {
 		max-width: 100%;
 	}
 
 	.services__top {
 		display: block;
 	}
+
 	.services__title-box {
 		padding-left: 0;
 		text-align: center;
 		margin: 0 auto 30px;
 
 	}
+
 	.services__title-box:before {
 		display: none;
 	}
+
 	.slick-btn {
 		text-align: center;
 	}
@@ -52,6 +64,7 @@
 	.header__btn-menu {
 		display: block;
 	}
+
 
 	.menu ul {
 		display: none;
