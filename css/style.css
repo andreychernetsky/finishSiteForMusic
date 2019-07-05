@@ -342,7 +342,7 @@ header {
 }
 /*оформление about*/
 .about{
-
+	margin-top: 3%;
 }
 .about__inner {
 	display: flex;
@@ -354,6 +354,7 @@ width: 50%;
 .slideshow {
 	margin: 0 auto;
 	position: relative;
+	width:100%;
 	max-width: 500px;
 }
 .slideshow__nav {
@@ -369,7 +370,8 @@ width: 50%;
 	transition: all linear .3s;
 	width: 50px;
 }
-.slideshow__nav:hover { background-color: rgba(0, 0, 0, .8); }
+
+.slideshow__nav:hover{ background-color: rgba(255, 194, 34 .8); }
 .slideshow__nav.slideshow__nav--prev { left: 0; }
 .slideshow__nav.slideshow__nav--next { right: 0; }
 .slide {
@@ -383,7 +385,7 @@ width: 50%;
 .slide__descr {
 	background-color: rgba(0, 0, 0, .8);
 	bottom: 0;
-	color: #ffffff;
+	color: #ffc222;
 	right: 0;
 	position: absolute;
 	padding: 10px;
@@ -400,6 +402,77 @@ width: 50%;
 	to {
 		opacity: 1;
 	}
+}
+
+/*оформление аккордеона*/
+/* Accordion */
+
+.accordion__item {
+	margin-bottom: 10px;
+	border: 1px solid #e5e5e5;
+}
+
+.accordion__item.active .accordion__content {
+	display: block;
+}
+
+.accordion__item.active .accordion__header {
+	border-bottom-color: #e5e5e5;
+}
+
+.accordion__item.active .accordion__header:after {
+	transform: translateY(-50%) rotate(-45deg);
+	margin-top: 5px;
+}
+
+.accordion__header {
+	padding: 15px 20px 15px 65px;
+	position: relative;
+
+	border-bottom: 1px solid transparent;
+	cursor: pointer;
+}
+
+.accordion__header:after {
+	content: "";
+	display: block;
+	width: 16px;
+	height: 16px;
+
+	border-top: 2px solid #ccc;
+	border-right: 2px solid #ccc;
+
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	z-index: 1;
+
+	transform: translateY(-50%) rotate(135deg);
+}
+
+.accordion__icon {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	z-index: 1;
+
+	transform: translateY(-50%);
+}
+
+.accordion__content {
+	padding: 15px 20px;
+	display: none;
+
+	font-size: 15px;
+	color: #999;
+	font-style: italic;
+	font-weight: 300;
+}
+
+.accordion__title {
+	font-size: 14px;
+	color: #333;
+	text-transform: uppercase;
 }
 /*оформление основного наши услуги блок about*/
 
