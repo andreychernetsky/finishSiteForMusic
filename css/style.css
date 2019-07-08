@@ -69,14 +69,17 @@ body {
 	background-color: #f38181;
 }
 
-.section__text {
+.section__desc {
 	padding-top: 3%;
-	width: 80%;
 	text-align: center;
 	font-size: 1.1rem;
 	line-height: 1.7rem;
 	color: #999
 }
+.section__art {
+	width: 70%;
+}
+
 
 header {
 	font-family: 'Roboto', sans-serif;
@@ -340,23 +343,28 @@ header {
 	font-size: 28px;
 
 }
+
 /*оформление about*/
-.about{
+.about {
 	margin-top: 3%;
 }
+
 .about__inner {
 	display: flex;
 	justify-content: space-between;
 }
+
 .about__item {
-width: 50%;
+	width: 50%;
+	padding: 10px;
 }
+
 .slideshow {
 	margin: 0 auto;
 	position: relative;
-	width:100%;
-	max-width: 500px;
+	width: 100%;
 }
+
 .slideshow__nav {
 	align-items: center;
 	color: #fff;
@@ -371,28 +379,40 @@ width: 50%;
 	width: 50px;
 }
 
-.slideshow__nav:hover{ background-color: rgba(255, 194, 34 .8); }
-.slideshow__nav.slideshow__nav--prev { left: 0; }
-.slideshow__nav.slideshow__nav--next { right: 0; }
-.slide {
+.slideshow__nav:hover {
+	background-color: rgba(0, 0, 0, .8);
+}
+
+.slideshow__nav.slideshow__nav--prev {
+	left: 0;
+}
+
+.slideshow__nav.slideshow__nav--next {
+	right: 0;
+}
+
+.slideshow__slide {
 	display: none;
 	position: relative;
 }
-.slide.active {
+
+.slideshow__slide.active {
 	animation: fade linear 1.5s;
 	display: block;
 }
-.slide__descr {
+
+.slideshow__descr {
 	background-color: rgba(0, 0, 0, .8);
 	bottom: 0;
-	color: #ffc222;
+	color: #ffffff;
 	right: 0;
 	position: absolute;
 	padding: 10px;
 }
 
-.slide__img {
+.slideshow__img {
 	vertical-align: middle;
+	max-width: 100%;
 }
 
 @keyframes fade {
@@ -407,73 +427,50 @@ width: 50%;
 /*оформление аккордеона*/
 /* Accordion */
 
-.accordion__item {
+.accordion{
+	width: 100%;
 	margin-bottom: 10px;
-	border: 1px solid #e5e5e5;
-}
+	box-shadow: 0px 7px 24.3px 2.7px rgba(91, 89, 89, 0.14);
 
-.accordion__item.active .accordion__content {
-	display: block;
 }
-
-.accordion__item.active .accordion__header {
-	border-bottom-color: #e5e5e5;
-}
-
-.accordion__item.active .accordion__header:after {
-	transform: translateY(-50%) rotate(-45deg);
-	margin-top: 5px;
-}
-
 .accordion__header {
-	padding: 15px 20px 15px 65px;
+	margin: 10px 0;
+	font-size: 1.8rem;
+	display: flex;
+	background-color: #f9f9f9;
+
 	position: relative;
-
 	border-bottom: 1px solid transparent;
-	cursor: pointer;
 }
-
-.accordion__header:after {
-	content: "";
-	display: block;
-	width: 16px;
-	height: 16px;
-
-	border-top: 2px solid #ccc;
-	border-right: 2px solid #ccc;
-
-	position: absolute;
-	top: 50%;
-	right: 20px;
-	z-index: 1;
-
-	transform: translateY(-50%) rotate(135deg);
-}
-
 .accordion__icon {
-	position: absolute;
-	top: 50%;
-	left: 20px;
-	z-index: 1;
-
-	transform: translateY(-50%);
+	margin-right: 20%;
+	left: 0;
+	background: #ffc222;
+	color:#ffffff;
+	display:block;
+	width: 30px;
 }
-
 .accordion__content {
-	padding: 15px 20px;
+	font-size: 1.4rem;
 	display: none;
-
-	font-size: 15px;
-	color: #999;
-	font-style: italic;
-	font-weight: 300;
+}
+.accordion__content.open {
+	padding: 10px 35px;
+	display: block;
+	animation: fade linear 1.5s;
+}
+span {
+	text-align: center;
+}
+@keyframes fade {
+	from {
+		opacity: .4;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
-.accordion__title {
-	font-size: 14px;
-	color: #333;
-	text-transform: uppercase;
-}
 /*оформление основного наши услуги блок about*/
 
 .services {
@@ -661,16 +658,19 @@ width: 50%;
 	padding: 55px 0 110px;
 	background-color: #f9f9f9;
 }
+
 .news__inner {
 	display: flex;
 	justify-content: space-between;
 
 }
-.news__blog-text{
+
+.news__blog-text {
 	letter-spacing: 0.1px;
 	color: #5e5e5e;
 }
-.news__slider{
+
+.news__slider {
 	max-width: 555px;
 	width: 100%;
 	background-color: #fff;
@@ -693,13 +693,16 @@ width: 50%;
 	line-height: 30px;
 	background-color: #ffc222;
 }
+
 .news__blog {
 	max-width: 260px;
 	width: 100%;
 }
+
 .news__images {
 	position: relative;
 }
+
 .news__date {
 	position: absolute;
 	background-color: #ffc222;
@@ -707,11 +710,12 @@ width: 50%;
 	width: 50px;
 	color: #ffffff;
 	text-align: center;
-	padding-top: 30px ;
+	padding-top: 30px;
 	font-weight: 700;
-	top:0;
-	left:10px;
+	top: 0;
+	left: 10px;
 }
+
 .news__title-box {
 	max-width: 520px;
 	padding-left: 140px;
@@ -754,27 +758,33 @@ width: 50%;
 	padding: 5px 38px;
 	border: 3px solid #e6e6e6;
 }
+
 .news__slider-author {
 	letter-spacing: 0.1px;
 	color: #212020;
 	font-weight: 500;
 	font-family: 'Roboto', sans-serif;
 }
-.news__slider-inner .slick-btn{
+
+.news__slider-inner .slick-btn {
 	top: auto;
 	bottom: -110px;
 }
-.news__slider-inner .slick-next{
+
+.news__slider-inner .slick-next {
 	right: -35px;
 }
-.news__slider-inner .slick-prev{
+
+.news__slider-inner .slick-prev {
 	right: 20px;
 	left: auto;
 }
-.news__slider-inner .slick-disabled{
+
+.news__slider-inner .slick-disabled {
 	border-color: #dadada;
 }
-.news__slider-inner .slick-disabled:before{
+
+.news__slider-inner .slick-disabled:before {
 	color: #dadada;
 }
 
@@ -782,24 +792,29 @@ width: 50%;
 .footer__content {
 	background-color: #595959;
 }
+
 .footer__inner {
 	display: flex;
 	justify-content: space-between;
 
 }
+
 .footer__inner .header__btn {
 
 }
+
 .footer__map {
 	padding-top: 10px;
 	max-width: 630px;
 }
+
 .footer__map iframe {
 
 	width: 100%;
 	height: 250px;
 
 }
+
 .footer__title {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
@@ -809,30 +824,35 @@ width: 50%;
 	letter-spacing: 0.5px;
 
 }
+
 .footer__text {
 	color: #d3d2d2;
 	margin-bottom: 20px;
 }
+
 .footer__info {
 	max-width: 360px;
 }
+
 .footer__list {
 	padding-top: 10px;
 }
 
-.footer__list li{
-	margin-top:10px;
+.footer__list li {
+	margin-top: 10px;
 }
+
 .footer__list a {
 	font-size: 1rem;
 	line-height: 24px;
 	letter-spacing: 0.25px;
 	color: #fff;
-	font-weight:400;
+	font-weight: 400;
 	font-family: 'Roboto', sans-serif;
 	padding-left: 33px;
 	position: relative;
 }
+
 .footer__list a:before {
 	content: '\f003';
 	position: absolute;
@@ -840,14 +860,17 @@ width: 50%;
 	color: #ffc222;
 	font-family: 'icomoon';
 }
+
 .footer__list .footer__phone:before {
- content: '\f095';
+	content: '\f095';
 	left: 13px;
 }
+
 .footer__list .footer__adress:before {
 	content: '\f041';
 	left: 13px;
 }
+
 .footer__copy {
 	background-color: #303030;
 	text-align: center;
@@ -857,6 +880,7 @@ width: 50%;
 	padding: 8px 0;
 	font-size: 1rem;
 }
+
 .footer__copy a {
 	color: #fff;
 }

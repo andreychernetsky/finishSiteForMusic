@@ -32,6 +32,13 @@
 	.news{
 		padding-bottom: 60px;
 	}
+	.footer__info{
+		max-width: 465px;
+		margin-bottom: 25px;
+	}
+	.footer__map{
+		max-width: 100%;
+	}
 
 }
 
@@ -92,6 +99,18 @@
 	.about__item {
 		width: 100%;
 	}
+	.footer__inner,
+	.about__inner{
+		display: flex;
+		flex-flow: row wrap;
+		flex-direction: column;
+	}
+	.footer__info {
+		width: 100%;
+	}
+	.footer__map {
+		width: 100%;
+	}
 }
 
 @media (max-width: 700px) {
@@ -135,6 +154,9 @@
 
 	.menu li + li {
 		padding: 0;
+	}
+	.footer__info .header__btn:before{
+		display: block;
 	}
 }
 

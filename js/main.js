@@ -18,23 +18,23 @@ $(function(){
 (function () {
   class SlideShow {
     constructor(startIndex, element) {
-      this.startIndex = startIndex;//с какой картинки будем начинать
+      this.startIndex = startIndex;
       this.currentIndex = this.startIndex;
-      this.element = element;//нужен для того чтобы понимать с каким элементом будем работать
-      this.slides = this.element.querySelectorAll('.slide');//будем искать элемент с классом .slide в SlideShow
-      this.setActiveSlide();//будем устанавливать активный сдайдер
-      this.next();//
-      this.prev();//
+      this.element = element;
+      this.slides = this.element.querySelectorAll('.slideshow__slide');
+      this.setActiveSlide();
+      this.next();
+      this.prev();
     }
 
     setActiveSlide() {
       this.slides.forEach((item, index) => {
         if (index === this.currentIndex) {
-        item.classList.add('active');
-      } else {
-        item.classList.remove('active');
-      }
-    })
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      })
 
     }
 
@@ -42,12 +42,12 @@ $(function(){
       let nextBtn = this.element.querySelector('[data-way="next"]');
       nextBtn.addEventListener('click', () => {
         if (this.currentIndex === this.slides.length - 1) {
-        this.currentIndex = 0;
-      } else {
-        this.currentIndex++;
-      }
-      this.setActiveSlide();//
-    })
+          this.currentIndex = 0;
+        } else {
+          this.currentIndex++;
+        }
+        this.setActiveSlide();
+      })
 
     }
 
@@ -55,12 +55,12 @@ $(function(){
       let prevBtn = this.element.querySelector('[data-way="prev"]');
       prevBtn.addEventListener('click', () => {
         if (this.currentIndex === 0) {
-        this.currentIndex = this.slides.length - 1;
-      } else {
-        this.currentIndex--;
-      }
-      this.setActiveSlide();
-    })
+          this.currentIndex = this.slides.length - 1;
+        } else {
+          this.currentIndex--;
+        }
+        this.setActiveSlide();
+      })
     }
   }
 
@@ -73,37 +73,27 @@ $(function(){
 
 }());
 
-/*
 
-const acc = document.getElementsByClassName(".accordion__item");
-let i;
-for(i = 0; i < acc.length; i++) {
-  acc[i].addEventListener('click', function() {
-    this.classList.toggle("active");
-    const panel = this.nextElementSibling;
-    panel.style.display == 'block' ?  panel.style.display ='none' :  panel.style.display = 'block';
-
-  });
-
-}
-*/
-/*(function Accordion() {
-  const[...accordion_containers] = document.querySelectorAl('[data-collapse]');
-
-  acordion_containers.forEach((accordion)=>{
-    const[...accordion_titles] = accordion.querySelectorAll('.accordion__item');
-
-    accordion_titles.forEach((title) => {
-      title.addEventListener('click', ()=> open(title, accordion_titles))
-    })
-  });
-  function open(title, siblings) {
-    siblings.forEach(item => item.classList.remove('active'));
-    title.calssList.add('active');
+(()=>{
+  const acc = document.getElementsByClassName("accordion__header");
+  for(let i=0; i < acc.length; i++) {
+    acc[i].addEventListener('click', toggleAccordion)
   }
 
-})();*/
+  function toggleAccordion() {
+    let accContent = this.nextElementSibling;
+    let accIcon = this.getElementsByClassName('accordion__icon')[0];
+    if (accContent.className === 'accordion__content'){
+      accContent.className = 'accordion__content open';
+      accIcon.innerHTML = '-';
+    } else {
+      accContent.className = 'accordion__content';
+      accIcon.innerHTML = '+';
+    }
+  }
+})();
 
+/*
 $("[data-collapse]").on("click", function(event) {
   event.preventDefault();
 
@@ -111,4 +101,4 @@ $("[data-collapse]").on("click", function(event) {
     blockId = $this.data('collapse');
 
   $this.toggleClass("active");
-});
+});*/
