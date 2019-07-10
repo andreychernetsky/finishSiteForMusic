@@ -76,10 +76,10 @@ body {
 	line-height: 1.7rem;
 	color: #999
 }
+
 .section__art {
 	width: 70%;
 }
-
 
 header {
 	font-family: 'Roboto', sans-serif;
@@ -98,6 +98,10 @@ header {
 	font-size: 16px;
 	display: block;
 	position: relative;
+}
+
+.header__btn--footer {
+	float: none;
 }
 
 .header__btn:before {
@@ -427,6 +431,7 @@ header {
 /*оформление аккордеона*/
 /* Accordion */
 
+/*
 .accordion{
 	width: 100%;
 	margin-bottom: 10px;
@@ -470,7 +475,73 @@ span {
 		opacity: 1;
 	}
 }
-
+*/
+/*/////////////////////////////////////////////////////////////////////////*/
+.wrap-container {
+	max-width: 700px;
+	margin:0 auto;
+	background:transparent;
+	text-align:center;
+}
+.wrap-container__notes {
+	margin:16px 0 0 0;
+}
+a:link, a:visited {color:#009;}
+a:hover {color:#00f;}
+.container__head {
+	color:#000;
+	text-align:center;
+	font-size:1.4rem;
+	margin:30px 0 30px 0;
+	letter-spacing: 2px;
+}
+.accordion {
+	width: 100%;
+	background: #fff;
+	border:1px solid #333;
+	text-align:left;
+}
+.accordion__title {
+	-webkit-appearance:none;
+	font-size: 1.1rem;
+	/*   text-transform: uppercase; */
+	letter-spacing: 2px;
+	padding: 1rem 1.5rem;
+	background: #333;
+	color: white;
+	cursor: pointer;
+	transition: .3s ease;
+	border:0 none;
+	border-bottom:1px solid #555;
+	width:100%;
+	text-align:left;
+	margin:0;
+}
+.accordion__title:hover, .accordion__title:focus  {
+	background: #000;
+}
+.accordion__copy {
+	overflow:hidden;
+	padding: 0 1.5rem 0 1.5rem;
+	color: #666;
+	line-height: 1.6;
+	font-size: 1rem;
+	font-weight: 500;
+	max-height:0;
+	transition: padding 0.5s, max-height 0.5s;
+}
+.accordion__copy__pic {
+	width:100px;
+	height:auto;
+	float:right;
+	margin:0 0 0 20px;
+}
+@media (min-width:540px){
+	.wrap-container__head {font-size:2rem;}
+	.accordion__copy__pic {
+		width:180px;
+	}
+}
 /*оформление основного наши услуги блок about*/
 
 .services {
@@ -788,6 +859,58 @@ span {
 	color: #dadada;
 }
 
+/*social*/
+.social {
+	display: flex;
+}
+
+.social--footer {
+
+	justify-content: center;
+}
+
+.social__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	height: 40px;
+	margin-right: 4px;
+
+	background-color: #fff;
+	border: 1px solid #e8ecee;
+
+	transition: background .1s linear;
+}
+
+.social__item:hover {
+	background-color: #e8ecee;
+}
+
+.social__item:hover .social__icon {
+	fill: #510505;
+}
+
+.social--footer .social__item {
+	background-color: transparent;
+	border-width: 2px;
+	border-color: #fff;
+	border-radius: 2px;
+}
+
+.social--footer .social__item:hover {
+	background-color: #fff;
+}
+
+.social__icon {
+	display: block;
+	height: 18px;
+
+	fill: #c6cacc;
+
+	transition: fill .1s linear;
+}
+
 /*оформление футара*/
 .footer__content {
 	background-color: #595959;
@@ -879,6 +1002,15 @@ span {
 	font-weight: 500;
 	padding: 8px 0;
 	font-size: 1rem;
+}
+
+.footer__block {
+	max-width: 360px;
+	width: 33%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .footer__copy a {
