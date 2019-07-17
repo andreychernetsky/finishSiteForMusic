@@ -45,6 +45,18 @@
 
 
 @media (max-width: 900px) {
+	.section {
+		margin:auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.section__suptitle {
+		font-size: 1.2rem;
+	}
+	.section__title {
+		font-size: 1.5rem;
+	}
 	.slider .slick-btn {
 		display: none !important;
 	}
@@ -161,6 +173,10 @@
 
 	.menu li + li {
 		padding: 0;
+	}
+	.section__art {
+		width:100%;
+		padding: 0 15px;
 	}
 	.footer__info .header__btn:before{
 		display: block;
