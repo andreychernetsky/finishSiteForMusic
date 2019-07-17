@@ -50,12 +50,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		padding: 40px 0;
 	}
 	.section__suptitle {
 		font-size: 1.2rem;
+		text-align: center;
 	}
 	.section__title {
 		font-size: 1.5rem;
+		text-align: center;
 	}
 	.slider .slick-btn {
 		display: none !important;
