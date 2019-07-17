@@ -46,6 +46,7 @@ body {
 }
 
 .section__suptitle {
+	text-align: center;
 	font-family: 'Kaushan Script', cursive;
 	font-size: 24px;
 	color: #333;
@@ -53,6 +54,7 @@ body {
 }
 
 .section__title {
+	text-align: center;
 	font-size: 1.9rem;
 	font-weight: 700;
 	color: #333;
