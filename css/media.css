@@ -143,6 +143,18 @@
 	.about__item {
 		width: 100%;
 	}
+	/*оформление game*/
+
+	.bloc-game{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.block-game__plan {
+		width: 100%;
+	}
 
 	.footer__inner,
 	.about__inner {

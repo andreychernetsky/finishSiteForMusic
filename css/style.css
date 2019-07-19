@@ -680,7 +680,66 @@ a:hover {
 		width: 180px;
 	}
 }
+/*блоки game*/
 
+.bloc-game,
+.music-art__wrap {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 20px;
+
+}
+
+.block-game__plan,
+.music-art__block {
+	width: 31%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+.block-game__title,
+.music-block__title {
+	margin: 0;
+	padding: 8px 0 8px 15px;
+	background: #ffc222;
+	font-size: 1.5rem;
+	line-height: 23px;
+	color: #fff;
+	text-align: center;
+
+}
+
+/*оформление блока ul*/
+
+.block-game__list{
+	background: #fff;
+}
+
+.block-game__item{
+	font-size: 1rem;
+	list-style: none;
+	border-bottom: 1px solid #e8e6de;
+	/*margin: 10px 16px;*/
+}
+
+.block-game__link{
+	display: block;
+	text-decoration: none;
+	color: #14652F;
+	font-size: 1.3rem;
+}
+
+.block-game__link:hover,
+.music-art__link:hover {
+	text-decoration: none;
+	color: #B8799E;
+	text-align: center;
+	min-width: 30%;
+}
 /*оформление основного наши услуги блок about*/
 
 .services {
