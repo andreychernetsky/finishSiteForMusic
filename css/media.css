@@ -223,6 +223,10 @@
 	.menu li + li {
 		padding: 0;
 	}
+	.video {
+		width:100%;
+		max-width: 100%;
+	}
 
 
 
