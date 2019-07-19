@@ -712,6 +712,12 @@ a:hover {
 	text-align: center;
 
 }
+.video {
+	margin:auto;
+	display: flex;
+	width: 600px;
+	margin-bottom: 3%;
+}
 
 /*оформление блока ul*/
 
