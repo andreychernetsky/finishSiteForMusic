@@ -145,14 +145,16 @@
 	}
 	/*оформление game*/
 
-	.bloc-game{
+	.bloc-game,
+	.music-art__wrap{
 		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		flex-wrap: wrap;
 	}
-	.block-game__plan {
+	.block-game__plan,
+   .music-art__block{
 		width: 100%;
 	}
 
@@ -226,6 +228,9 @@
 	.video {
 		width:100%;
 		max-width: 100%;
+	}
+	.blockquote {
+		width: 100%;
 	}
 
 

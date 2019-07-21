@@ -27,11 +27,14 @@ span {
 }
 
 body {
-	font-family: 'PT Serif', serif;
+	/*font-family: 'PT Serif', serif;*/
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 1.1rem;
+	line-height: 1.7rem;
+	color: #999;
+	font-family: 'icomoon';
+}
 
-	color: #ffffff;
 }
 
 .section__inner {
@@ -450,6 +453,12 @@ body {
 .reviews__content {
 	width: 50%;
 }
+.reviews__text {
+	font-size: 1.1rem;
+	line-height: 1.7rem;
+	color: #999;
+	font-family: 'icomoon';
+}
 
 /*оформление about*/
 .about {
@@ -825,6 +834,10 @@ a:hover {
 .services__item-text {
 	letter-spacing: 0.1px;
 	padding: 0 30px 30px;
+	font-size: 1.1rem;
+	line-height: 1.7rem;
+	color: #999;
+	font-family: 'icomoon';
 
 }
 
@@ -845,6 +858,61 @@ a:hover {
 
 .services__link:hover {
 	color: #ffc222;
+}
+
+/*оформление цитат*/
+.blockquote {
+	position: relative;
+	padding-top: 30px;
+}
+
+.block-game__descrip {
+	line-height: 1.9rem;
+	padding: 0 10px 0;
+	color: #444;
+}
+
+.blockquote__one {
+	background: #fff4e0;
+	color: #474c4f;
+	padding: 60px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
+}
+
+.blockquote__one:before {
+	font-family: FontAwesome;
+	content: "\f10d";
+	position: absolute;
+	z-index: 20;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 60px;
+	color: #474C4F;
+	font-size: 20px;
+	background: #FFF4E0;
+	padding: 0 15px;
+}
+
+.blockquote__one:after {
+	content: "";
+	position: absolute;
+	left: 15px;
+	top: 60px;
+	right: 15px;
+	height: 4px;
+	border-top: 1px dotted #474C4F;
+	border-bottom: 1px dotted #474C4F;
+}
+
+.blockquote__text {
+	font-size: 20px;
+	letter-spacing: .05em;
+	line-height: 1.4;
+	text-align: center;
+	font-style: normal;
+	font-weight: 300;
 }
 
 /*оформление Card*/
